@@ -1,0 +1,37 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.warning {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  font-size: calc(1rem + 1.5vw);
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  composes: background from "../styles/utils/background.modules.scss";
+  background-position: center top;
+  background-image: url('../../public/img/ice-boots-yellow.jpg');
+  z-index: -100;
+}

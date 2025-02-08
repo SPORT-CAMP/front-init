@@ -1,0 +1,9 @@
+.link {
+  color: var(--link-color);
+}
+.link:hover {
+  color: var(--link-hover-color);
+}
+.link:active {
+  color: var(--link-active-color);
+}

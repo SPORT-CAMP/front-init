@@ -1,8 +1,22 @@
 @import 'normalize.css';
+@import '../styles/assert/bootstrap.css';
+@import '../styles/base.css';
 
 .light-scheme {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #212050;
+  --background-secondary: #D9D9D9;
+  --background-third: #000000;
+  --foreground: #ffffff;
+  --foreground-secondary: #2D2D2D;
+  --foreground-third: #414141;
+
+  --accent-color: #8B56B3;
+  --accent-light-color: #705286;
+  --accent-dark-color: #4E1C74;
+
+  --link-color: var(--accent-color);
+  --link-hover-color: var(--accent-light-color);
+  --link-active-color: var(--accent-dark-color);
 }
 
 .dark-scheme {
@@ -29,8 +43,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
