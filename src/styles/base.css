@@ -1,5 +1,10 @@
 .container {
+  margin: 0 auto;
   max-width: 1200px;
+}
+
+.h1, .h2, .h3 {
+  color: var(--foreground);
 }
 
 .link {
@@ -12,3 +17,6 @@
   color: var(--link-active-color);
 }
 
+ul {
+  list-style: none;
+}
