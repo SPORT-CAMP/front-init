@@ -1,6 +1,10 @@
 @import 'normalize.css';
 @import '../styles/assert/bootstrap.css';
 @import '../styles/base.css';
+/* shared */
+@import '../styles/shared/section.css';
+/* components */
+@import '../styles/components/button.css';
 
 .light-scheme {
   --background: #212050;
@@ -43,9 +47,14 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--foreground);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair), Times New Roman, serif;
 }
 
 * {

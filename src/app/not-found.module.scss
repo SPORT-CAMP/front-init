@@ -31,7 +31,7 @@
   position: absolute;
   inset: 0;
   composes: background from "../styles/utils/background.modules.scss";
-  background-position: center top;
+  background-position: center;
   background-image: url('../../public/img/ice-boots-yellow.jpg');
   z-index: -100;
 }
