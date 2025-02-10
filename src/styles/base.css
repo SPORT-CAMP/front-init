@@ -20,3 +20,7 @@
 ul {
   list-style: none;
 }
+
+svg {
+  color: var(--foreground);
+}
