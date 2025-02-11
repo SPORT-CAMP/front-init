@@ -1,0 +1,40 @@
+.footer {
+  color: var(--foreground-third);
+  background-color: var(--background-third);
+  font-size: 1rem;
+}
+
+.sectionInner {
+  position: relative;
+  display: flex;
+}
+
+.column{
+  width: 50%;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: currentColor;
+
+  }
+}
+
+.contactTop {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.gap1Rem {
+  gap: 1rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}

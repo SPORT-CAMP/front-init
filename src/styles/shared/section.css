@@ -1,0 +1,6 @@
+.section {
+  --section-padding-block: 2rem;
+  --section-padding-inline: 1rem;
+
+  padding: var(--section-padding-block) var(--section-padding-inline);
+}

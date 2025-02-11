@@ -1,15 +1,19 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Playfair, Montserrat } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/shared/header/Header';
+import Footer from '@/components/shared/footer/Footer';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const serifFont = Playfair({
+  variable: '--font-playfair',
+  subsets: ['cyrillic', 'latin'],
+  weight: ['600', '900'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const sansSerifFont = Montserrat({
+  variable: '--font-montserrat',
+  subsets: ['cyrillic', 'latin'],
+  weight: ['400', '500', '600', '900'],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`light-scheme ${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`light-scheme ${serifFont.variable} ${sansSerifFont.variable}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
