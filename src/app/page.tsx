@@ -6,12 +6,13 @@ import DifficultiesIcon from '../assets/img/icons/difficulties.svg';
 import VictoryIcon from '../assets/img/icons/victory.svg';
 import MultiStarIcon from '../assets/img/icons/multi-star.svg';
 import LongArrowRight from '../assets/img/icons/long-arrow-right.svg';
+import GeoPointIcon from '../assets/img/icons/geo-point.svg';
 
 export default function Home() {
   return (
     <main>
-      <div className={pageStyles.hero}>
-        <div className={`section ${pageStyles.section}`}>
+      <section className={`section ${pageStyles.section}`}>
+        <div className="container">
           <div className={pageStyles.sectionInner}>
             <div className={pageStyles.wrapperMultiStar}>
               <MultiStarIcon />
@@ -42,7 +43,147 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+      {/*  END hero */}
+
+      <section className={`section ${pageStyles.section}`}>
+        <div className="container">
+          <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>КОМАНДА</h2>
+          <p className={pageStyles.text}>
+            Сплоченная команда специалистов и&nbsp;единомышленников поможет спортсмену раскрыть свои
+            сильные стороны и&nbsp;гармонично развить те&nbsp;аспекты, которые требуют
+            дополнительного внимания и&nbsp;проработки.
+          </p>
+          <p className={pageStyles.text}>
+            Поставит эффективную технику прыжков, реберное скольжение и&nbsp;динамичные вращения.
+          </p>
+        </div>
+      </section>
+      {/* END team */}
+
+      <section className={`section ${pageStyles.section}`}>
+        <div className="container">
+          <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>программа сборов</h2>
+        </div>
+
+        <div
+          className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
+        >
+          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+            <div className={pageStyles.background__underlayer}></div>
+          </div>
+          <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
+            Ледовая подготовка
+          </h3>
+          <div className={wrapperStyles.centered}>
+            <ul className={pageStyles.list}>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Постановка и корректировка техники исполнения прыжковых элементов
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Отработка вращений
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Тренировки по скольжению, в том числе разучивание тестов по скольжению
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
+        >
+          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+            <div className={pageStyles.background__underlayer}></div>
+          </div>
+          <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>Тренировки в зале</h3>
+          <div className={wrapperStyles.centered}>
+            <ul className={pageStyles.list}>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Общая физическая подготовка (укрепление основных групп мышц, развитие аэробных
+                возможностей, развитие координации, баланса)
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Специальная физическая подготовка (скоростно-силовые качества, взрывная сила,
+                крутка)
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Хореография (классическая, танцы, растяжка)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
+        >
+          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+            <div className={pageStyles.background__underlayer}></div>
+          </div>
+          <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
+            Дополнительные тренировки
+          </h3>
+          <div className={wrapperStyles.centered}>
+            <ul className={pageStyles.list}>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Вестибулярный тренажер
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Индивидуальные тренировки
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Постановка программ
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Тренировки на удочке
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className={`section ${pageStyles.section}`}>
+        <div className="container">
+          <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>
+            Тренировочный сбор{' '}
+            <span className={pageStyles.highlight}>по специальной физической</span> подготовке
+          </h2>
+        </div>
+        <article className="card">
+          <div className="card__body">
+            <div className="card__section">
+              <h3 className="card__sub-title">Цели</h3>
+              <ul className={pageStyles.list}>
+                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                  Развитие специальных физических качеств
+                </li>
+                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                  Совершенствование техники исполнения элементов
+                </li>
+              </ul>
+            </div>
+
+            <div className="card__section">
+              <h3 className="card__sub-title">Где</h3>
+              <ul className={pageStyles.list}>
+                <li className={pageStyles.listItem}>
+                  <GeoPointIcon />
+                  Санкт-Петербург, ДС&nbsp;им&nbsp;В.Б. Харламова
+                </li>
+              </ul>
+            </div>
+
+            <div className="card__section">
+              <h3 className="card__sub-title">Для кого</h3>
+              <ul className={pageStyles.list}>
+                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                  Спортсмены с 10 до 16 лет
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
   );
 }

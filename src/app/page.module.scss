@@ -5,15 +5,54 @@
   text-transform: uppercase;
 }
 
-.hero {
+.section {
   background-color: var(--background);
 }
 
 .sectionInner {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.title {
+  margin-bottom: 1.45rem;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: calc(1.375rem + 5vw);
+  text-transform: uppercase;
+}
+
+.subSection {
   position: relative;
+  min-height: calc(100vh - 90px);
+  padding-block: 4rem;
+  z-index: 10;
+}
+
+.subSectionCentered {
+  composes: centered from "../styles/utils/wrapper-centered.module.scss";
+  flex-direction: column;
+}
+
+.fullWidth {
+  margin-inline: -15px;
+}
+
+.subSectionTitle {
+  font-size: 2rem;
+}
+
+.text {
+  text-align: justify;
+}
+
+.text:not(:last-of-type) {
+  margin-bottom: 1em;
 }
 
 .wrapperMultiStar {
@@ -27,15 +66,31 @@
   }
 }
 
-.highlight {
-  color: var(--accent-color);
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+
+  composes: background from "../styles/utils/background.modules.scss";;
+  background-size: cover;
+
+  &__underlayer {
+    position: absolute;
+    inset: 0;
+    background-color: var(--background);
+    opacity: .7;
+  }
+}
+
+.backgroundTest {
+  background-image: url("../../public/img/test-background.jpg");
 }
 
 .list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 75%;
+  width: 80%;
 }
 
 .listItem {
@@ -52,13 +107,19 @@
   }
 }
 
+.listItemDash::before {
+  content: '\2014';
+}
+
 .btn {
   width: 100%;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 600;
   border: 1px solid currentColor;
 }
 
-
+.highlight {
+  color: var(--accent-color);
+}
 
 

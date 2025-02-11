@@ -5,6 +5,7 @@
 @import '../styles/shared/section.css';
 /* components */
 @import '../styles/components/button.css';
+@import '../styles/components/card.css';
 
 .light-scheme {
   --background: #212050;
@@ -50,11 +51,18 @@ body {
   font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
   color: var(--foreground);
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: var(--font-playfair), Times New Roman, serif;
+  font-weight: 900;
+}
+
+h3, h4 {
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 * {
