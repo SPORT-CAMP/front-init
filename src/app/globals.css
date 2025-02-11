@@ -11,9 +11,10 @@
   --background: #212050;
   --background-secondary: #D9D9D9;
   --background-third: #000000;
+
   --foreground: #ffffff;
-  --foreground-secondary: #2D2D2D;
-  --foreground-third: #414141;
+  --foreground-secondary: #414141 ;
+  --foreground-third: #D9D9D9;
 
   --accent-color: #8B56B3;
   --accent-light-color: #705286;

@@ -28,3 +28,8 @@ p {
 svg {
   color: var(--foreground);
 }
+
+.small-icon svg {
+  width: 18px;
+  height: auto;
+}
