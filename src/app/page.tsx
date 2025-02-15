@@ -39,14 +39,16 @@ export default function Home() {
             </div>
             <button className={`btn ${pageStyles.btn}`}>
               ЗАДАТЬ ВОПРОСЫ
-              <LongArrowRight />
+              <span className="btn__icon">
+                <LongArrowRight />
+              </span>
             </button>
           </div>
         </div>
       </section>
       {/*  END hero */}
 
-      <section className={`section ${pageStyles.section}`}>
+      <section id="team" className={`section ${pageStyles.section}`}>
         <div className="container">
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>КОМАНДА</h2>
           <p className={pageStyles.text}>
@@ -61,7 +63,7 @@ export default function Home() {
       </section>
       {/* END team */}
 
-      <section className={`section ${pageStyles.section}`}>
+      <section id="camp-plan" className={`section ${pageStyles.section}`}>
         <div className="container">
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>программа сборов</h2>
         </div>
@@ -141,8 +143,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* END camp-plan */}
 
-      <section className={`section ${pageStyles.section}`}>
+      <section id="camp" className={`section ${pageStyles.section}`}>
         <div className="container">
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>
             Тренировочный сбор{' '}
@@ -181,9 +184,16 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+            <button className={`btn card__btn`}>
+              Записаться
+              <span className="btn__icon">
+                <LongArrowRight />
+              </span>
+            </button>
           </div>
         </article>
       </section>
+      {/*  END camp */}
     </main>
   );
 }

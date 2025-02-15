@@ -116,6 +116,17 @@
   font-size: 20px;
   font-weight: 600;
   border: 1px solid currentColor;
+
+  &:hover {
+    color: var(--background);
+    background-color: var(--foreground);
+    border-color: var(--background);
+  }
+
+  &:hover svg,
+  &:active svg {
+    color: var(--background);
+  }
 }
 
 .highlight {
