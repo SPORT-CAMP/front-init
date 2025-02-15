@@ -4,3 +4,7 @@
 
   padding: var(--section-padding-block) var(--section-padding-inline);
 }
+
+.section--camp-plan {
+  padding-top: 0;
+}

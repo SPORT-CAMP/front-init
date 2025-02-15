@@ -1,5 +1,7 @@
 import headerStyles from './header.module.css';
 import Burger from '@/components/ui/burger/Burger';
+import Navigation from '@/components/ui/navigation/Navigation';
+
 export default function Header() {
   return (
     <header className={headerStyles.header}>
@@ -7,7 +9,10 @@ export default function Header() {
         <div className="section">
           <div className={headerStyles.headerWrapper}>
             <div>LOGO</div>
-            <Burger />
+            <div>
+              <Burger />
+              <Navigation />
+            </div>
           </div>
         </div>
       </div>
