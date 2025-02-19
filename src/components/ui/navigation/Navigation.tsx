@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <nav className={`${navigationStyle.mainMenu} ${!isOpen ? navigationStyle.close : ''}`}>
       <div className={navigationStyle.body}>
-        <h3 className={navigationStyle.title}>Меню</h3>
+        <h3 className={`h3 ${navigationStyle.title}`}>Меню</h3>
         <ul className={navigationStyle.list}>
           <li className={navigationStyle.item}>
             <Link onClick={closeNavigation} className={navigationStyle.link} href="/">
@@ -20,8 +20,23 @@ export default function Navigation() {
             </Link>
           </li>
           <li className={navigationStyle.item}>
-            <Link onClick={closeNavigation} className={navigationStyle.link} href="/favorite">
-              Избранное
+            <Link onClick={closeNavigation} className={navigationStyle.link} href="#team">
+              Команда
+            </Link>
+          </li>
+          <li className={navigationStyle.item}>
+            <Link onClick={closeNavigation} className={navigationStyle.link} href="#camp-plan">
+              Программа сборов
+            </Link>
+          </li>
+          <li className={navigationStyle.item}>
+            <Link onClick={closeNavigation} className={navigationStyle.link} href="#camp">
+              Сборы
+            </Link>
+          </li>
+          <li className={navigationStyle.item}>
+            <Link onClick={closeNavigation} className={navigationStyle.link} href="#contact">
+              Контакты
             </Link>
           </li>
         </ul>
