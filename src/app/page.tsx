@@ -39,14 +39,16 @@ export default function Home() {
             </div>
             <button className={`btn ${pageStyles.btn}`}>
               ЗАДАТЬ ВОПРОСЫ
-              <LongArrowRight />
+              <span className="btn__icon">
+                <LongArrowRight />
+              </span>
             </button>
           </div>
         </div>
       </section>
       {/*  END hero */}
 
-      <section className={`section ${pageStyles.section}`}>
+      <section id="team" className={`section ${pageStyles.section}`}>
         <div className="container">
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>КОМАНДА</h2>
           <p className={pageStyles.text}>
@@ -61,91 +63,91 @@ export default function Home() {
       </section>
       {/* END team */}
 
-      <section className={`section ${pageStyles.section} ${pageStyles.sectionCampProgram}`}>
+      <section
+        id="camp-plan"
+        className={`section ${pageStyles.section} ${pageStyles.sectionCampProgram}`}
+      >
         <div className="container">
-          <div className={pageStyles.underlayer}></div>
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>программа сборов</h2>
+        </div>
 
-          <div
-            className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
-          >
-            <div className={`${pageStyles.background} ${pageStyles.backgroundSkaterOnIce}`}>
-              <div className={pageStyles.background__underlayer}></div>
-            </div>
-            <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
-              Ледовая подготовка
-            </h3>
-            <div className={wrapperStyles.centered}>
-              <ul className={pageStyles.list}>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Постановка и корректировка техники исполнения прыжковых элементов
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Отработка вращений
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Тренировки по скольжению, в том числе разучивание тестов по скольжению
-                </li>
-              </ul>
-            </div>
+        <div
+          className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
+        >
+          <div className={`${pageStyles.background} ${pageStyles.backgroundSkaterOnIce}`}>
+            <div className={pageStyles.background__underlayer}></div>
           </div>
-
-          <div
-            className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
-          >
-            <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
-              <div className={pageStyles.background__underlayer}></div>
-            </div>
-            <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
-              Тренировки в зале
-            </h3>
-            <div className={wrapperStyles.centered}>
-              <ul className={pageStyles.list}>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Общая физическая подготовка (укрепление основных групп мышц, развитие аэробных
-                  возможностей, развитие координации, баланса)
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Специальная физическая подготовка (скоростно-силовые качества, взрывная сила,
-                  крутка)
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Хореография (классическая, танцы, растяжка)
-                </li>
-              </ul>
-            </div>
+          <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
+            Ледовая подготовка
+          </h3>
+          <div className={wrapperStyles.centered}>
+            <ul className={pageStyles.list}>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Постановка и корректировка техники исполнения прыжковых элементов
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Отработка вращений
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Тренировки по скольжению, в том числе разучивание тестов по скольжению
+              </li>
+            </ul>
           </div>
+        </div>
 
-          <div
-            className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
-          >
-            <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
-              <div className={pageStyles.background__underlayer}></div>
-            </div>
-            <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
-              Дополнительные тренировки
-            </h3>
-            <div className={wrapperStyles.centered}>
-              <ul className={pageStyles.list}>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Вестибулярный тренажер
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Индивидуальные тренировки
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Постановка программ
-                </li>
-                <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
-                  Тренировки на удочке
-                </li>
-              </ul>
-            </div>
+        <div
+          className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
+        >
+          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+            <div className={pageStyles.background__underlayer}></div>
+          </div>
+          <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>Тренировки в зале</h3>
+          <div className={wrapperStyles.centered}>
+            <ul className={pageStyles.list}>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Общая физическая подготовка (укрепление основных групп мышц, развитие аэробных
+                возможностей, развитие координации, баланса)
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Специальная физическая подготовка (скоростно-силовые качества, взрывная сила,
+                крутка)
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Хореография (классическая, танцы, растяжка)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
+        >
+          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+            <div className={pageStyles.background__underlayer}></div>
+          </div>
+          <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
+            Дополнительные тренировки
+          </h3>
+          <div className={wrapperStyles.centered}>
+            <ul className={pageStyles.list}>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Вестибулярный тренажер
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Индивидуальные тренировки
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Постановка программ
+              </li>
+              <li className={`${pageStyles.listItem} ${pageStyles.listItemDash}`}>
+                Тренировки на удочке
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className={`section ${pageStyles.section}`}>
+      <section id="camp" className={`section ${pageStyles.section}`}>
         <div className="container">
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>
             Тренировочный сбор{' '}
@@ -184,9 +186,16 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+            <button className={`btn card__btn`}>
+              Записаться
+              <span className="btn__icon">
+                <LongArrowRight />
+              </span>
+            </button>
           </div>
         </article>
       </section>
+      {/*  END camp */}
     </main>
   );
 }

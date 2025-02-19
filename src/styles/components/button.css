@@ -13,4 +13,15 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
+
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s  ease;
+}
+
+.btn__icon {
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.btn:hover .btn__icon,
+.btn:active .btn__icon {
+  transform: translateX(.5em);
 }
