@@ -9,6 +9,22 @@
   background-color: var(--background);
 }
 
+.sectionCampProgram {
+  background-color: var(--background-camp-program);
+}
+
+.sectionLayerWrapper {
+  position: relative;
+
+  &__underlayer {
+    position: absolute;
+    inset: 0;
+    background-color: var(--background);
+    opacity: .7;
+  }
+}
+
+
 .sectionInner {
   position: relative;
   display: flex;
@@ -86,6 +102,10 @@
   background-image: url("../../public/img/test-background.jpg");
 }
 
+.backgroundSkaterOnIce {
+  background-image: url("../../public/img/background/skaters-on-ice.webp");
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -132,5 +152,6 @@
 .highlight {
   color: var(--accent-color);
 }
+
 
 

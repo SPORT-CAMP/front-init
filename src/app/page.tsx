@@ -63,7 +63,10 @@ export default function Home() {
       </section>
       {/* END team */}
 
-      <section id="camp-plan" className={`section ${pageStyles.section}`}>
+      <section
+        id="camp-plan"
+        className={`section ${pageStyles.section} ${pageStyles.sectionCampProgram}`}
+      >
         <div className="container">
           <h2 className={`${pageStyles.title} ${pageStyles.sectionTitle}`}>программа сборов</h2>
         </div>
@@ -71,7 +74,7 @@ export default function Home() {
         <div
           className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
         >
-          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+          <div className={`${pageStyles.background} ${pageStyles.backgroundSkaterOnIce}`}>
             <div className={pageStyles.background__underlayer}></div>
           </div>
           <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>
@@ -143,7 +146,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* END camp-plan */}
 
       <section id="camp" className={`section ${pageStyles.section}`}>
         <div className="container">
