@@ -33,3 +33,7 @@ svg {
   width: 18px;
   height: auto;
 }
+
+.body.body-freeze {
+  overflow: hidden;
+}
