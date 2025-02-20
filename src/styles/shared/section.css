@@ -2,6 +2,7 @@
   --section-padding-block: 2rem;
   --section-padding-inline: 1rem;
 
+  position: relative;
   padding: var(--section-padding-block) var(--section-padding-inline);
 }
 

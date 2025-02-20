@@ -33,3 +33,8 @@ svg {
   width: 18px;
   height: auto;
 }
+
+.body-scroll-lock {
+  height: 100vh;
+  overflow: hidden;
+}

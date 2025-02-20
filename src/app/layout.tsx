@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`light-scheme ${serifFont.variable} ${sansSerifFont.variable}`}>
+      <body className={`body light-scheme ${serifFont.variable} ${sansSerifFont.variable}`}>
         <Header />
         {children}
         <Footer />

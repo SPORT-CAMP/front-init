@@ -1,10 +1,31 @@
 'use client';
-import burgerStyles from './burger.module.css';
-import { useState } from 'react';
 
-// TODO открытие меню, анимация бургера
+import { useEffect, useState } from 'react';
+import { useMainMenuContext } from '@/context/main-menu-context';
+
+import burgerStyles from './burger.module.css';
+
 export default function Burger() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useMainMenuContext();
+  const [body, setBody] = useState<Element | null>(null);
+
+  const onBurgerClick = () => {
+    setIsOpen(!isOpen);
+    toggleBodyScrollLock();
+  };
+
+  function toggleBodyScrollLock() {
+    if (body) {
+      body.classList.toggle('body-scroll-lock');
+    }
+  }
+
+  useEffect(() => {
+    const body = document.querySelector('.body');
+    if (body) {
+      setBody(body);
+    }
+  });
 
   return (
     <div
@@ -15,7 +36,7 @@ export default function Burger() {
         type="button"
         className={`${burgerStyles.btn} btn`}
         aria-label="open-navigation"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => onBurgerClick()}
       >
         <span key={1} className={`${burgerStyles.line} ${burgerStyles.lineTop}`} />
         <span key={2} className={`${burgerStyles.line} ${burgerStyles.lineMiddle}`} />
