@@ -98,7 +98,7 @@ export default function Home() {
         <div
           className={`${pageStyles.subSection} ${pageStyles.fullWidth} ${pageStyles.subSectionCentered}`}
         >
-          <div className={`${pageStyles.background} ${pageStyles.backgroundTest}`}>
+          <div className={`${pageStyles.background} ${pageStyles.backgroundSkaterInTheGym}`}>
             <div className={pageStyles.background__underlayer}></div>
           </div>
           <h3 className={`${pageStyles.title} ${pageStyles.subSectionTitle}`}>Тренировки в зале</h3>
