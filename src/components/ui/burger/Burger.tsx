@@ -1,7 +1,9 @@
 'use client';
-import burgerStyles from './burger.module.css';
+
 import { useEffect, useState } from 'react';
 import { useMainMenuContext } from '@/context/main-menu-context';
+
+import burgerStyles from './burger.module.css';
 
 export default function Burger() {
   const { isOpen, setIsOpen } = useMainMenuContext();
@@ -9,11 +11,14 @@ export default function Burger() {
 
   const onBurgerClick = () => {
     setIsOpen(!isOpen);
-    console.log(document.querySelector('.body'));
-    if (body) {
-      body.classList.toggle('body-freeze');
-    }
+    toggleBodyScrollLock();
   };
+
+  function toggleBodyScrollLock() {
+    if (body) {
+      body.classList.toggle('body-no-scroll');
+    }
+  }
 
   useEffect(() => {
     const body = document.querySelector('.body');

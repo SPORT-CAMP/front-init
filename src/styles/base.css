@@ -34,6 +34,7 @@ svg {
   height: auto;
 }
 
-.body.body-freeze {
+.body-no-scroll {
+  height: 100vh;
   overflow: hidden;
 }
