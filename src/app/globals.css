@@ -19,7 +19,8 @@
   --background-secondary: #D9D9D9;
   --background-third: #000000;
 
-  --background-camp-program: #5c5d7f;
+  --background-camp-program: var(--background);
+  --background-underlayer: #000000;
 
   --foreground: #ffffff;
   --foreground-secondary: #414141 ;
