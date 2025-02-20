@@ -34,7 +34,7 @@ svg {
   height: auto;
 }
 
-.body-no-scroll {
+.body-scroll-lock {
   height: 100vh;
   overflow: hidden;
 }

@@ -16,7 +16,7 @@ export default function Burger() {
 
   function toggleBodyScrollLock() {
     if (body) {
-      body.classList.toggle('body-no-scroll');
+      body.classList.toggle('body-scroll-lock');
     }
   }
 
