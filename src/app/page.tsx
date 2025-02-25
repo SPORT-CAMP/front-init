@@ -7,8 +7,27 @@ import VictoryIcon from '../assets/img/icons/victory.svg';
 import MultiStarIcon from '../assets/img/icons/multi-star.svg';
 import LongArrowRight from '../assets/img/icons/long-arrow-right.svg';
 import GeoPointIcon from '../assets/img/icons/geo-point.svg';
+import Carousel from '@/components/ui/swiper/swiper';
+import PersonCard from '@/components/ui/cards/PersonCard';
 
 export default function Home() {
+  const coaches = [
+    {
+      title: 'Петр Петров',
+      textList: ['Тренер по прыжкам', 'Опыт 5 лет'],
+      iconPath: '/img/test/chuck-norris.jpg',
+      alt: 'Фото Петр',
+    },
+    {
+      title: 'Иван Иванов',
+      textList: ['Тренер по скольжению', 'Опыт 5 лет'],
+      iconPath: '/img/test/chuck-norris.jpg',
+      alt: 'Фото Ивана',
+    },
+  ];
+
+  const slides = coaches.map((item) => <PersonCard {...item} />);
+
   return (
     <main>
       <section className={`section ${pageStyles.section}`}>
@@ -59,6 +78,7 @@ export default function Home() {
           <p className={pageStyles.text}>
             Поставит эффективную технику прыжков, реберное скольжение и&nbsp;динамичные вращения.
           </p>
+          <Carousel slides={slides} />
         </div>
       </section>
       {/* END team */}

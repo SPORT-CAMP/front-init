@@ -25,7 +25,7 @@ export default function Burger() {
     if (body) {
       setBody(body);
     }
-  });
+  }, []);
 
   return (
     <div
