@@ -1,4 +1,5 @@
-type PersonCardProps = {
+export type PersonCardProps = {
+  index: number;
   title: string;
   textList: string[];
   iconPath: string;

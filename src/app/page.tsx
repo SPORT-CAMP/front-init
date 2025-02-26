@@ -13,12 +13,14 @@ import PersonCard from '@/components/ui/cards/PersonCard';
 export default function Home() {
   const coaches = [
     {
+      index: 1,
       title: 'Петр Петров',
       textList: ['Тренер по прыжкам', 'Опыт 5 лет'],
       iconPath: '/img/test/chuck-norris.jpg',
       alt: 'Фото Петр',
     },
     {
+      index: 2,
       title: 'Иван Иванов',
       textList: ['Тренер по скольжению', 'Опыт 5 лет'],
       iconPath: '/img/test/chuck-norris.jpg',

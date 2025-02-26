@@ -1,46 +1,51 @@
 'use client';
 
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-import { SwiperOptions } from 'swiper/types';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { ReactHTMLElement, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperOptions, Swiper as SwiperType } from 'swiper/types';
 
+import LeftArrow from '@/assets/img/icons/left-arrow.svg';
+import RightArrow from '@/assets/img/icons/right-arrow.svg';
+
+import 'swiper/css';
 import swiperStyle from './swiper.module.scss';
+import { useState } from 'react';
 
 type CarouselProps = {
-  slides: any[];
+  slides: React.ReactNode[];
   additionalClassName?: string;
 };
 
 const swiperParams: SwiperOptions = {
   slidesPerView: 1,
-  spaceBetween: 50,
+  spaceBetween: 30,
   loop: true,
-  modules: [Navigation],
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 };
 
 export default function Carousel(props: CarouselProps) {
   const { slides, additionalClassName } = props;
-  useEffect(() => {
-    const swiper = new Swiper('.swiper', swiperParams);
-  }, []);
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+
   return (
-    <div className="swiper">
-      <div className={`swiper-wrapper ${additionalClassName}`}>
-        {slides.map((item, index) => (
-          <div className="swiper-slide" key={index}>
-            {item}
-          </div>
-        ))}
-      </div>
-      <div className={`swiper-button-prev ${swiperStyle.navigationBtn}`}></div>
-      <div className={`swiper-button-next ${swiperStyle.navigationBtn}`}></div>
-    </div>
+    <Swiper
+      className={`swiper ${swiperStyle.swiper} ${additionalClassName ? additionalClassName : ''}`}
+      onSwiper={setSwiper}
+      {...swiperParams}
+    >
+      {slides.map((item, index) => (
+        <SwiperSlide key={index}>{item}</SwiperSlide>
+      ))}
+      <button
+        className={`btn ${swiperStyle.btnNav} ${swiperStyle.btnNavPrev}`}
+        onClick={() => swiper?.slidePrev()}
+      >
+        <LeftArrow />
+      </button>
+      <button
+        className={`btn ${swiperStyle.btnNav} ${swiperStyle.btnNavNext}`}
+        onClick={() => swiper?.slideNext()}
+      >
+        <RightArrow />
+      </button>
+    </Swiper>
   );
 }
