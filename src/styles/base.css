@@ -26,15 +26,17 @@ p {
 }
 
 svg {
+  width: 16px;
   color: var(--foreground);
 }
 
 .small-icon svg {
   width: 18px;
-  height: auto;
 }
 
 .body-scroll-lock {
   height: 100vh;
   overflow: hidden;
 }
+
+

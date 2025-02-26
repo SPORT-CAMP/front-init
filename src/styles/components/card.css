@@ -10,7 +10,7 @@
   border-radius: 15px;
 }
 
-.card__section:not(:last-child) {
+.card__section:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
@@ -19,6 +19,13 @@
   color: currentColor;
   text-align: center;
   font-size: 2rem;
+}
+
+.card__icon-user {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .card__btn {

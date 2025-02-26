@@ -1,0 +1,33 @@
+.swiper {
+  --btn-offset: 20px;
+
+  &:hover {
+    .btnNav {
+      opacity: 1;
+    }
+  }
+}
+
+.btnNav {
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  z-index: 100;
+
+  transition: opacity .2s;
+
+  svg {
+    width: 40px;
+  }
+}
+
+.btnNavPrev {
+  left: var(--btn-offset);
+}
+
+.btnNavNext {
+  right: var(--btn-offset);
+}
